@@ -1,0 +1,67 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container{
+    margin: 100px auto;
+    padding: 25px;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.temp1{
+    width: 80%;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+.radbtn{
+    margin: 10px 5px;
+}
+
+.mybtn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mybtn:hover{
+    background-color: #0056b3;
+}
+
+#myout{
+    margin-top: 20px;
+    color: #333;
+}
+
+.resetbtn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resetbtn:hover{
+    background-color: #0056b3;
+}
