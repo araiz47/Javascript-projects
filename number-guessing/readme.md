@@ -1,0 +1,1 @@
+Its a basic Number guessing game i made with Html,Css and JS. It uses basic if else structure and its pretty dang easy.
