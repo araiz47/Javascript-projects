@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef2f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+#gametitle{
+    color: #333;
+    margin-bottom: 25px;
+}
+
+#scr{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+button{
+    width: 140px;
+    padding: 12px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+    transition: 0.25s;
+}
+
+#myrockbtn1{
+    background-color: #6c757d;
+}
+
+#myrockbtn1:hover{
+    background-color: #565e64;
+    transform: scale(1.05);
+}
+
+#mypaperbtn2{
+    background-color: #0d6efd;
+}
+
+#mypaperbtn2:hover{
+    background-color: #0b5ed7;
+    transform: scale(1.05);
+}
+
+#myscissbtn3{
+    background-color: #198754;
+}
+
+#myscissbtn3:hover{
+    background-color: #157347;
+    transform: scale(1.05);
+}
+
+h3{
+    margin-top: 18px;
+    color: #333;
+}
+
+#myout1,
+#myout2,
+#myout3{
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#resetbtn{
+    margin-top: 20px;
+    background-color: #dc3545;
+}
+
+#resetbtn:hover{
+    background-color: #bb2d3b;
+    transform: scale(1.05);
+}

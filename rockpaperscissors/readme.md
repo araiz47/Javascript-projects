@@ -1,0 +1,1 @@
+I created the first version for Rock-Paper-Scissors. Its basic and also very lengthy cause i used if else and switch and i havent learned functions yet. ill create an updated version with functions so the code reduces.
