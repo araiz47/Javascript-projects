@@ -1,0 +1,1 @@
+A really basic first version of password strength checker that checks if a password is strong based on length. Im gonna upgrade it more later once i learn more JS stuff.
