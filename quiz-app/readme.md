@@ -1,0 +1,1 @@
+So i made a basic quiz app. There are minor flaws cause i still havent learnt events.
