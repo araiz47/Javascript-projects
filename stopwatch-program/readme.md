@@ -1,0 +1,1 @@
+Basic Stopwatch Program using more JS Concepts. I only made it for practice.
