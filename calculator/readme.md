@@ -1,0 +1,1 @@
+I made a basic calculator to practice more Javascript. The logic was easy.
