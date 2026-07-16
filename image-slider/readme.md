@@ -1,0 +1,1 @@
+A image slider i made to practice more JS. The logic was decently hard to figure out.
