@@ -1,0 +1,1 @@
+A weather app project made to use the last few concepts i learnt. The main concept used here was the API call. The logic is a bit complexed but manageable once practiced.
