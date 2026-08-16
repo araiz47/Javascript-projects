@@ -9,6 +9,7 @@ const wind = document.querySelector("#wind");
 const pressure = document.querySelector("#pressure");
 const weatherIcon = document.querySelector("#weather-icon");
 const dateElement = document.querySelector("#date");
+const hourlyContainer = document.querySelector("#hourly-container");
 const apikey = "6396505bb3526b114b888e00c1f4132c";
 
 searchForm.addEventListener("submit", async(event) => {
@@ -19,11 +20,24 @@ searchForm.addEventListener("submit", async(event) => {
         alert("Please Enter a city");
         return;
     }
+
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
 
-    const response = await fetch(url);
-    const data = await response.json();
-    displayWeather(data);
+   
+    try{
+        const response = await fetch(url);
+       
+        if(!response.ok){
+            throw new Error("City Not Found");
+        }
+        const data = await response.json();
+        displayWeather(data);
+
+    }catch(error){
+       console.log(error);
+       alert("Unable to get weather data. Please check the city name or your connection."); 
+    } 
+    getHourlyForecast(city);
 });
 
 const displayWeather = (data) => {
@@ -36,8 +50,51 @@ const displayWeather = (data) => {
     pressure.textContent = data.main.pressure;
     const iconCode = data.weather[0].icon;
     weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-    console.log(data);
+    
 }
 
+const currentDate = new Date();
+const fotmattedDate = currentDate.toLocaleDateString("en-US",{
+    weekday: "long",
+    month: "long",
+    day: "numeric"
+});
+dateElement.textContent = fotmattedDate;
 
+const getHourlyForecast = async(city) => {
+try{
+    const url2 = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apikey}&units=metric`;
+    const response2 = await fetch(url2);
+    const data2 = await response2.json();
 
+    
+
+    const forecast = data2.list[0];
+    const card = document.createElement("div");
+    card.classList.add("forecast-card");
+
+    for(let i = 0; i < 8; i++){
+        const forecast = data2.list[i];
+
+        const time = new Date(forecast.dt * 1000);
+
+        const formattedTime = time.toLocaleTimeString("en-US",{
+            hour: "numeric",
+            minute: "2-digit"
+        });
+
+        const card = document.createElement("div");
+        card.classList.add("forecast-card");
+       card.innerHTML = `
+       <p>${formattedTime}</p>
+        <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png">
+        <h3>${Math.round(forecast.main.temp)}°C</h3>
+        <p>${forecast.weather[0].description}</p>`;
+        hourlyContainer.appendChild(card);
+
+    }
+    }catch (error){
+        console.log(error);
+    }
+
+};
