@@ -10,6 +10,7 @@ const pressure = document.querySelector("#pressure");
 const weatherIcon = document.querySelector("#weather-icon");
 const dateElement = document.querySelector("#date");
 const hourlyContainer = document.querySelector("#hourly-container");
+const dailyContainer = document.querySelector("#daily-container")
 const apikey = "6396505bb3526b114b888e00c1f4132c";
 
 searchForm.addEventListener("submit", async(event) => {
@@ -67,6 +68,8 @@ try{
     const response2 = await fetch(url2);
     const data2 = await response2.json();
 
+    getDailyForecast(data2.list);
+
     
 
     const forecast = data2.list[0];
@@ -96,5 +99,51 @@ try{
     }catch (error){
         console.log(error);
     }
+    
 
+};
+
+const getDailyForecast = (forecastList) =>{
+    dailyContainer.innerHTML = "";
+    const dailyData = {};
+
+    forecastList.forEach((forecast) =>{
+  
+        const date = forecast.dt_txt.split(" ")[0];
+        if(!dailyData[date]){
+            dailyData[date] = [];
+        }
+        dailyData[date].push(forecast);
+        
+        
+    });
+    const dates = Object.keys(dailyData);
+    dates.forEach((date)=>{
+            const forecasts = dailyData[date];
+            const temperatures = forecasts.map((forecast) => {
+                return forecast.main.temp;
+            });
+
+            const maxTemp = Math.max(...temperatures);
+            const minTemp = Math.min(...temperatures);
+            
+            const weather = forecasts[0].weather[0];
+            const day = new Date(date);
+            const dayName = day.toLocaleDateString("en-US",{
+                weekday: "long"
+            });
+
+            const card = document.createElement("div");
+            card.classList.add(("forecast-card"));
+
+            card.innerHTML = `
+            <h3>${dayName}</h3>
+            <img src="https://openweathermap.org/img/wn/${weather.icon}@2x.png">
+            <p>${weather.description}</p>
+            <p>High: ${Math.round(maxTemp)}°C</p>
+            <p>Low: ${Math.round(minTemp)}°C</p>`;
+
+            dailyContainer.appendChild(card);
+        });
+   
 };
