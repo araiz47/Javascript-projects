@@ -194,9 +194,9 @@ const getDailyForecast = (forecastList) => { // to display the 5 day forecast
 
 
     const dates = Object.keys(dailyData);
-
+    const upcomingDates = dates.slice(1, 6);
     // Create one card for each day
-    dates.forEach((date) => {
+    upcomingDates.forEach((date) => {
 
         const forecasts = dailyData[date];
 
