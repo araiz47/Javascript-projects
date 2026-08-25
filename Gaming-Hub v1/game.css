@@ -1,0 +1,108 @@
+body {
+    position: relative;
+    background: #0f1117;
+    color: white;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: -30px;
+
+    background-image: var(--game-background);
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(25px);
+    opacity: 0.5;
+
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: rgba(15, 17, 23, 0.45);
+
+    z-index: -1;
+}
+
+#game-details {
+    display: flex;
+    gap: 3rem;
+    padding: 4rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+
+    border-radius: 20px;
+    background: rgba(15, 17, 23, 0.35);
+    backdrop-filter: blur(5px);
+}
+
+#game-details-image {
+    flex: 0 0 400px;
+}
+
+#game-details-image img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+#game-details-info {
+    flex: 1;
+}
+
+#game-title {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#game-details-info p {
+    font-family: "Orbitron", sans-serif;
+    margin-bottom: 1rem;
+}
+
+#game-description {
+    line-height: 1.7;
+    color: #9ca3af;
+}
+
+#game-details-image,
+#game-details-info {
+    position: relative;
+    z-index: 1;
+}
+
+#screenshots-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 3rem auto;
+}
+
+#screenshots-section h2 {
+    font-family: "Orbitron", sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+#screenshots-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#screenshots-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+
+    transition: transform 0.25s ease;
+}
+
+#screenshots-container img:hover {
+    transform: scale(1.03);
+}
