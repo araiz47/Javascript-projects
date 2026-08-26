@@ -103,7 +103,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    background: rgba(255, 255, 255, 0.05);
+    background-image: url(images/wallpaperflare.com_wallpaper\ \(2\).jpg);
     border-radius: 20px;
     margin-bottom: 20px;
 }
@@ -112,22 +112,28 @@ header {
     font-size: 3rem;
     font-family: "Orbitron", sans-serif;
     margin-bottom: 1rem;
+    background-color: #0a0c11;
+    border-radius: 20px;
 }
 
 #hero p {
     font-size: 1.1rem;
     font-family: "Orbitron", sans-serif;
     margin-bottom: 20px;
+    background-color: black;
+    border-radius: 20px;
 }
 
 #explore-btn {
     display: inline-block;
     text-decoration: none;
     padding: 8px 12px;
-    color: #9ca3af;
+    background-color: #0a0c11;
+    color: white;
     font-family: "Orbitron", sans-serif;
     border-radius: 10px;
     transition: 0.2s ease;
+    border-radius: 20px;
 }
 
 #explore-btn:hover {

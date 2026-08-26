@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="discover.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="discover.html">Discover</a>
+        <a href="genres.html">Genres</a>
+        <a href="favorites.html">Favorites</a>
+    </nav>
+        
+      <main>
+        <section id="discover">
+
+            <h2>Discover Games</h2>
+
+            <form id="discover-search-form">
+                <input
+                    type="text"
+                    id="discover-game-input"
+                    placeholder="Search games..."
+                >
+                <button type="submit">Search</button>
+            </form>
+
+            <div id="discover-container"></div>
+
+        </section>
+      </main>  
+      <script src="discover.js"></script>
+    </body>
+</html>
