@@ -1,9 +1,9 @@
 const params = new URLSearchParams(window.location.search);
 const gameId = params.get("id");
-const api_key = "78ba1d1d430941289871a4b3479aad21";
+
 
 const getGameDetails = async() =>{
-    const url =  `https://api.rawg.io/api/games/${gameId}?key=${api_key}`;
+    const url = `http://127.0.0.1:5000/api/games/${gameId}`;
     const response = await fetch(url);
 try{
 
@@ -46,7 +46,7 @@ try{
             .appendChild(image);
 
             const screenshotUrl =
-                `https://api.rawg.io/api/games/${gameId}/screenshots?key=${api_key}`;
+                `http://127.0.0.1:5000/api/games/${gameId}/screenshots`;
 
             const screenshotResponse = await fetch(screenshotUrl);
 

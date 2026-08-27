@@ -2,7 +2,7 @@ const searchForm = document.querySelector("#search-form");
 const gameInput = document.querySelector("#game-input");
 const trendingContainer = document.querySelector("#trending-container");
 const popularContainer = document.querySelector("#popular-container");
-const api_key = "78ba1d1d430941289871a4b3479aad21";
+const api_key = 
 
 searchForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -19,7 +19,7 @@ searchForm.addEventListener("submit", (event) => {
         `discover.html?search=${encodeURIComponent(query)}`;
 });
 const getGames = async() => {
-    const url = `https://api.rawg.io/api/games?key=${api_key}`;
+   const url = `http://127.0.0.1:5000/api/games`;
 
     try{
         const response = await fetch(url);
@@ -114,7 +114,7 @@ const displayPopularGames = (games) => {
 const getPopularGames = async () => {
 
     const url =
-        `https://api.rawg.io/api/games?key=${api_key}&ordering=-rating&page_size=20`;
+    `http://127.0.0.1:5000/api/games?ordering=-rating&page_size=20`;
 
     try {
 

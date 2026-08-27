@@ -4,7 +4,7 @@ const discoverContainer = document.querySelector("#discover-container")
 const params = new URLSearchParams(window.location.search);
 const searchQuery = params.get("search");
 console.log("Search Query: ", searchQuery);
-const api_key = "78ba1d1d430941289871a4b3479aad21";
+const api_key =
 
 discoverSearchForm.addEventListener("submit", (event)=>{
     event.preventDefault();
@@ -47,8 +47,9 @@ const createDiscoverCard = (game)=>{
 
 
 const discoverGames = async() =>{
-    const url =  `https://api.rawg.io/api/games?key=${api_key}&search=${encodeURIComponent(searchQuery)}&search_precise=true&page_size=12`;
-
+const url =
+    `http://127.0.0.1:5000/api/games?search=${encodeURIComponent(searchQuery)}`;
+    
     try{
 
         const response = await fetch(url);
