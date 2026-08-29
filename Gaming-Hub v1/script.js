@@ -29,7 +29,6 @@ const getGames = async() => {
         }
 
         const data = await response.json();
-
         displayTrendingGames(data.results);
     }
     catch(error){

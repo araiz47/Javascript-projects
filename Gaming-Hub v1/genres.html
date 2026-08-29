@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="game-card.css">
+        <link rel="stylesheet" href="genres.css">
+    </head>
+    <body>
+    <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="discover.html">Discover</a>
+        <a href="genres.html">Genres</a>
+        <a href="favorites.html">Favorites</a>
+    </nav>
+        <section id="genres">
+            <h2 id="genre">Genres</h2>
+             <form id="genres-search-form">
+                <input
+                    type="text"
+                    id="genres-game-input"
+                    placeholder="Search games..."
+                >
+                <button type="submit">Search</button>
+            </form>
+            <div id="genres-container"></div>
+            <div id="genre-games-container"></div>
+        </section>
+        <script src="genres.js"></script>
+    </body>
+</html>

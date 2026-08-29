@@ -18,6 +18,7 @@ def get_games():
     search = request.args.get("search", "")
     ordering = request.args.get("ordering", "")
     page_size = request.args.get("page_size", "")
+    genres = request.args.get("genres", "")
 
     url = "https://api.rawg.io/api/games"
 
@@ -33,6 +34,9 @@ def get_games():
 
     if page_size:
         params["page_size"] = page_size
+
+    if genres:
+        params["genres"] = genres
 
     response = requests.get(url, params=params)
 
