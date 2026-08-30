@@ -1,7 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     position: relative;
     background: #0f1117;
     color: white;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -107,3 +112,29 @@ body::after {
     transform: scale(1.03);
 }
 
+#favorite-btn {
+    display: block;
+    margin: 30px auto;
+
+    padding: 12px 20px;
+
+    border: 1px solid #8b5cf6;
+    border-radius: 10px;
+
+    background: transparent;
+    color: #9ca3af;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.9rem;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+#favorite-btn:hover {
+    background-color: #8b5cf6;
+    color: white;
+
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
+}

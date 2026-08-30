@@ -1,0 +1,69 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-color: #0f1117;
+    color: white;
+    overflow-x: hidden;
+
+    font-family: "Orbitron", sans-serif;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#navbar a {
+    display: block;
+    text-decoration: none;
+
+    padding: 8px 12px;
+
+    color: #9ca3af;
+
+    font-family: "Orbitron", sans-serif;
+
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+#navbar a:hover {
+    color: white;
+    background-color: #8b5cf6;
+}
+
+#favorites {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+}
+
+#favorites h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#empty-message {
+    color: #9ca3af;
+    margin-bottom: 2rem;
+}
+
+#favorites-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+

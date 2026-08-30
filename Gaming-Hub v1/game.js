@@ -1,5 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const gameId = params.get("id");
+const favoriteBtn = document.querySelector("#favorite-btn");
 
 
 const getGameDetails = async() =>{
@@ -11,6 +12,49 @@ try{
             throw new Error("Unable to fetch game details");
         }
             const game = await response.json();
+            let favorites =
+            JSON.parse(localStorage.getItem("favorites")) || [];
+
+        const updateFavoriteButton = () => {
+
+            const alreadyFavorite = favorites.some(
+                (favorite) => favorite.id === game.id
+            );
+
+            if (alreadyFavorite) {
+                favoriteBtn.textContent = "💔 Remove from Favorites";
+            } else {
+                favoriteBtn.textContent = "❤ Add to Favorites";
+            }
+        };
+
+        updateFavoriteButton();
+
+        favoriteBtn.addEventListener("click", () => {
+
+            const alreadyFavorite = favorites.some(
+                (favorite) => favorite.id === game.id
+            );
+
+            if (alreadyFavorite) {
+
+                favorites = favorites.filter(
+                    (favorite) => favorite.id !== game.id
+                );
+
+            } else {
+
+                favorites.push(game);
+
+            }
+
+            localStorage.setItem(
+                "favorites",
+                JSON.stringify(favorites)
+            );
+
+            updateFavoriteButton();
+        });
             
             document.body.style.setProperty(
                 "--game-background",
