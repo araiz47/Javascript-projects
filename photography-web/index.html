@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maple Lane Photography</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="#top" class="logo">Maple Lane Photography</a>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#genres">Genres</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  </header>
+
+  <main>
+
+    <section id="top" class="hero">
+      <div class="slide active">
+        <img src="images/couple-sunset.jpg" alt="Couple laughing together at sunset">
+        <div class="slide-text">
+          <h1>Moments, quietly kept.</h1>
+          <p>Natural, unposed photography for the days you want to remember.</p>
+          <a href="#gallery" class="btn">View my work</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="images/silhoutte.jpg" alt="Sillhoute of a couple on beach" loading="lazy">
+        <div class="slide-text">
+          <p class="slide-title">Your story, beautifully told.</p>
+          <p>From the first look to the last dance, I'll capture all of it.</p>
+          <a href="#gallery" class="btn">View my work</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="images/looking on roof.jpg" alt="Portrait of a woman in soft window light" loading="lazy">
+        <div class="slide-text">
+          <p class="slide-title">Portraits with personality.</p>
+          <p>Relaxed sessions that feel like you, only better lit.</p>
+          <a href="#gallery" class="btn">View my work</a>
+        </div>
+      </div>
+
+      <div class="dots">
+        <button type="button" class="dot active" aria-label="Show slide 1"></button>
+        <button type="button" class="dot" aria-label="Show slide 2"></button>
+        <button type="button" class="dot" aria-label="Show slide 3"></button>
+      </div>
+    </section>
+
+    <section id="about">
+      <img src="images/placeholder for photographer.jpg" alt="Mira holding a camera" loading="lazy">
+      <h2>Hi, I'm Mira Voss</h2>
+      <p>I'm a photographer who loves honest, unposed moments. I work with couples, families, and individuals to capture the small things that make a day feel like yours.</p>
+      <a href="#contact">Work with me</a>
+    </section>
+
+    <section id="genres">
+      <h2>What I shoot</h2>
+      <div class="genre-blocks">
+        <div class="genre-block">
+          <img src="images/wedding.png" alt="Bride and groom exchanging rings" loading="lazy">
+          <h3>Weddings</h3>
+          <p>Full-day coverage that tells the story of your day from the first look to the last dance.</p>
+          <a href="#gallery">View weddings</a>
+        </div>
+
+        <div class="genre-block">
+          <img src="images/smile.png" alt="Woman smiling in natural light" loading="lazy">
+          <h3>Portraits</h3>
+          <p>Relaxed sessions for individuals, families, and professionals that feel natural and look great.</p>
+          <a href="#gallery">View portraits</a>
+        </div>
+
+        <div class="genre-block">
+          <img src="images/couple.jpg" alt="Couple walking hand in hand on a beach" loading="lazy">
+          <h3>Couples</h3>
+          <p>Engagement and anniversary shoots at places that mean something to you both.</p>
+          <a href="#gallery">View couples</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Selected work</h2>
+      <p>A few favorites from recent sessions. Filter by type to see more.</p>
+      <div class="filters">
+        <button type="button" class="filter active" data-filter="all">All</button>
+        <button type="button" class="filter" data-filter="wedding">Weddings</button>
+        <button type="button" class="filter" data-filter="portrait">Portraits</button>
+        <button type="button" class="filter" data-filter="couple">Couples</button>
+      </div>
+      <div class="gallery">
+        <img class="tile" data-category="wedding" src="images/wedding dance.jpg" alt="Bride and groom sharing a first dance" loading="lazy">
+        <img class="tile" data-category="portrait" src="images/looking on roof.jpg" alt="Woman looking at the city" loading="lazy">
+        <img class="tile" data-category="couple" src="images/couplewalking.jpg" alt="Couple walking along a beach at sunset" loading="lazy">
+
+        <img class="tile" data-category="portrait" src="images/man walking.jpg" alt="Man in a denim jacket leaning on a brick wall" loading="lazy">
+        <img class="tile" data-category="wedding" src="images/rings.jpg" alt="Wedding rings resting on a bouquet" loading="lazy">
+        <img class="tile" data-category="couple" src="images/couplelaughinfeilds.jpg" alt="Couple laughing together in a field" loading="lazy">
+
+        <img class="tile" data-category="couple" src="images/lake.jpg" alt="Couple holding hands at the edge of a lake" loading="lazy">
+        <img class="tile" data-category="wedding" src="images/walking.jpg" alt="Bridesmaids walking together through a garden" loading="lazy">
+        <img class="tile" data-category="portrait" src="images/curls.jpg" alt="Close-up portrait of a woman with curly hair" loading="lazy">
+      </div>
+    </section>
+
+    <section id="testimonial">
+      <blockquote>Mira made us feel completely at ease, and the photos looked like us on our best day. We still look at them every week.</blockquote>
+      <p>Sana and Bilal, wedding clients</p>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <div class="services-cards">
+        <div class="service-card">
+          <h3>Mini session</h3>
+          <p>30 minutes at one location with 10 edited photos. From $120.</p>
+          <a href="#contact">Book a mini session</a>
+        </div>
+
+        <div class="service-card">
+          <h3>Portrait session</h3>
+          <p>One hour, up to two outfits, and 25 edited photos. From $250.</p>
+          <a href="#contact">Book a portrait session</a>
+        </div>
+
+        <div class="service-card">
+          <h3>Wedding day</h3>
+          <p>Full-day coverage with a private online gallery. From $1,800.</p>
+          <a href="#contact">Ask about weddings</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Let's work together</h2>
+      <p>Tell me a little about your day or your shoot, and I'll get back to you within two days.</p>
+
+      <form id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" aria-describedby="nameError">
+          <p class="error" id="nameError"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" aria-describedby="emailError">
+          <p class="error" id="emailError"></p>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" aria-describedby="messageError"></textarea>
+          <p class="error" id="messageError"></p>
+        </div>
+
+        <button type="submit" class="btn">Send message</button>
+        <p id="formMsg" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="#top" class="logo">Mira's Photography</a>
+        <p>Natural, unposed photography for the days you want to remember.</p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h3>Explore</h3>
+          <a href="#about">About</a>
+          <a href="#genres">Genres</a>
+          <a href="#gallery">Gallery</a>
+        </div>
+        <div>
+          <h3>Get in touch</h3>
+          <a href="mailto:hello@mira-photography.example">Email me</a>
+          <a href="#contact">Contact form</a>
+          <a href="#top">Back to top</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Maple Lane Photography. All rights reserved.</span>
+      <span>Available to travel.</span>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button type="button" id="lightboxClose" class="lightbox-close" aria-label="Close image">&times;</button>
+    <img id="lightboxImg" alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
